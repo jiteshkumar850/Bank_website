@@ -1,0 +1,14 @@
+
+	<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		    <link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+		
+	</head>
+	<body>
+	<h1 class="text-sucess mt-3 text-center" >Dear, <span th:text="${name}"></span> your Current Balance in your Bank account is <span style="color: blue;" th:text="${'&#8377;'+acno+''}"></span></h1>
+	<div class="container">
+        <img style="width: 90%;" src="/images/sbi.png">
+    </div>
+	</body>
+</html>

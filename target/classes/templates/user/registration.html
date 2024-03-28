@@ -1,0 +1,122 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+		<style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/images/bank2.jpg');
+            background-size: cover;
+        }
+        
+        .window {
+            width: 50%;
+            height: 80%;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 20px;
+            backdrop-filter: blur(20px) brightness(100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+        
+        input[type="email"],
+        input[type="password"],[type="text"] {
+            border-radius: 8px;
+            border: 1px solid black;
+            color: white !important;
+            background: transparent;
+        }
+        
+        form {
+            width: 100%;
+        }
+        
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            background: #00000040;
+            box-shadow: none;
+            border: 1px solid black;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+	</head>
+	<body >
+        <div class="container col-8 border-5 window">
+             <h1 class="text-dark">Sign Up</h1>
+        <form action="registration" method="post">
+            <div class="row mt-4 mx-5">
+                <div class="col-4">
+                    <label for="id" class=" text-dark" style="font-weight: 600;">Enter Id:</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="id" name="id" class="form-control bg-transparent" placeholder="Enter id" required>
+                </div>
+            </div>
+            <div class="row mt-2 mx-5">
+                <div class="col-4">
+                    <label for="name" class=" text-dark" style="font-weight: 600;">Enter Name:</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="name" name="name" class="form-control bg-transparent" placeholder="Enter Name" required>
+                </div>
+            </div>
+            <div class="row mx-5 mt-2">
+                <div class="col-4">
+                    <label for="email" class=" text-dark" style="font-weight: 600;">Enter Email:</label>
+                </div>
+                <div class="col-8">
+                    <input type="email" id="email" name="email" class="form-control bg-transparent" placeholder="Enter email" required>
+                </div>
+            </div>
+            <div class="row mx-5 mt-2">
+                <div class="col-4">
+                    <label for="password" class=" text-dark" style="font-weight: 600;">Enter Password:</label>
+                </div>
+                <div class="col-8">
+                    <input type="password" id="password" name="password" class="form-control bg-transparent" placeholder="Enter password" required>
+                </div>
+            </div>
+            <div class="row mx-5 mt-2">
+                <div class="col-4">
+                    <label for="cpassword" class=" text-dark" style="font-weight: 600;">Confirm Password:</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="cpassword" name="confirmpassword" class="form-control bg-transparent" placeholder="Confirm password" required>
+                </div>
+            </div>
+            <div class="row mx-5 mt-2">
+                <div class="col-4">
+                    <label for="mobile" class=" text-dark" style="font-weight: 600;">Enter Mobile No:</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="mobile" name="mobile" class="form-control bg-transparent" placeholder="Enter Mobile Number" required>
+                </div>
+            </div>
+            <div class="row mx-5 mt-2">
+                <div class="col-4">
+                    <label for="address" class=" text-dark" style="font-weight: 600;">Enter Address:</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" id="address" name="address" class="form-control bg-transparent" placeholder="Enter Address" required>
+                </div>
+            </div>
+            <button type="submit" class="mb-2 btn btn-primary container  mt-2"><b>Sign Up</b></button>
+            <div class="text-center text-dark"> <small style="font-weight: 600;">If you Already Have an Account? <a href="login" style="font-weight: 600;" class="text-warning">Sign In</a></small></div>
+        </form>    
+       <div class="row text-center"> <h5 style="color: red;text-align: center" th:text="${msg}"></h5></div>
+        </div>
+</body>
+
+</html>

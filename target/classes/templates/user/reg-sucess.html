@@ -1,0 +1,15 @@
+	<div th:insert="/user/nav1"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+	</head>	<body>
+		<h3 style="color:green;text-align: center;">
+			Dear User, <span th:text="${name}"></span> registration sucessfully...
+		</h3>
+			<h3 style="color:rgb(0, 128, 255);text-align: center;">
+			Your Account no is:<span th:text="${acc}"></span>
+		</h3>
+			<h3 style="text-align: center;">		
+<a href="login" style="text-align: center">Login here</a></h3>
+	</body>
+</html>

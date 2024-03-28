@@ -1,0 +1,38 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="@{/CSS/bootstrap.min.css}">
+    <style>
+        body {
+            background-image: url(/images/sbi.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin: 10px;backdrop-filter: blur(20px) brightness(100%);" class="col m-auto bg-transparent p-5 rounded-pill">
+        <form action="deposit-sucess" method="post">
+            <div>
+                <h3 class="text-success text-center">Deposit Money</h3>
+            </div>
+            <div class="form-group">
+                <h6>Enter Amount:</h6>
+                <input type="text" name="amount" class="form-control bg-transparent" placeholder="Enter deposit amount" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="acno" th:value="*{session.accno}" hidden>
+
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-success mt-1">Deposit</button>
+            </div>
+                        <h5 style="color: red;text-align: center;" th:text="${msg}"></h5>
+        </form>
+    </div>
+</body>
+
+</html>

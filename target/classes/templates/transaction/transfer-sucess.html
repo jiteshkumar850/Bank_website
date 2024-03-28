@@ -1,0 +1,17 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="@{/CSS/bootstrap.min.css}">
+    <style>
+        body {
+            background-image: url(/images/sbi.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+	<h5 style="color: green;text-align: center;">
+		Sucessfully transfer amount <span style="color: rgb(255, 0, 0);" th:text="${'&#8377;'+amount+''}"></span> in account no <span style="color: blue;" th:text="${receiver}"></span> from account no <span style="color: blue;" th:text="${'&#8377;'+session.accno+''}"></span>
+	</h5>
+</html>

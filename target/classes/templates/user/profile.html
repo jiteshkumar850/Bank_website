@@ -1,0 +1,61 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+    <style>
+        body {
+           
+            background: url('/images/profile.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <div class="container col-8 border-5 " style="backdrop-filter: blur(20px) brightness(100%);">
+        <div class="text-center"><h1 class="text-dark">User Details</h1></div>
+        <table class="table m-5">
+            <tbody>
+				<tr>
+                    <th scope="row">User_name:</th>
+                    <td th:text="${user.name}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">User_id:</th>
+                    <td th:text="${user.id}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Email_id:</th>
+                    <td th:text="${user.email}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Address:</th>
+                    <td th:text="${user.address}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Mobile_number:</th>
+                    <td th:text="${user.mobile}"></td>
+                </tr>                
+                <tr>
+                    <th scope="row">Account_no:</th>
+                    <td th:text="${ac.accno}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Account_balance:</th>
+                    <td th:text="${ac.amount}"></td>
+                </tr>
+                <tr>
+                    <th scope="row">Password:</th>
+                    <td th:text="${user.password}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

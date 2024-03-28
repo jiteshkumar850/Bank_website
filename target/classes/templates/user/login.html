@@ -1,0 +1,35 @@
+	<div th:insert="/user/nav1"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">	
+	</head>
+	<body style="background-color: skyblue;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img style="width: 70%;border-radius: 195px;margin: 60px;" src="/images/bank.png">
+            </div>
+            <div style="margin: 10px;" class="col m-auto  bg-warning p-5 rounded-pill">
+                <form action="login-verify" method="post">
+                    <div>
+                        <h3 class="text-primary text-center">Login form</h3>
+                    </div>
+                    <div class="form-group">
+                        <h6>Enter Id:</h6>
+                        <input type="text" name="id"  class="form-control bg-transparent" placeholder="Enter your id" required>
+                    </div>
+                    <div class="form-group">
+                        <h6>Password</h6>
+                        <input type="password" name="password" class="form-control bg-transparent" placeholder="Enter password" required>
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success mt-1">Login</button>
+                    </div>
+                    <h5 style="color: red;text-align: center;" th:text="${msg}"></h5>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

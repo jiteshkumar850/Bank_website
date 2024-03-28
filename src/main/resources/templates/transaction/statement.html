@@ -1,0 +1,33 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		    <link rel="stylesheet" th:href="@{/CSS/bootstrap.min.css}">
+
+	</head>
+	<body style="background-color: skyblue;">
+		 <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">S.no</th>
+                            <th scope="col">Amount_type</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Account No</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td th:if="${tlist==null}" colspan="6" class="text-center" style="font-weight: 600;color: red;">No Statement </td></tr>
+                      <tr th:if="${tlist!=null}" th:each="tlist:${tlist}">
+						  <td th:text="${tlist.tid}"></td>
+						  <td th:text="${tlist.amounttype}"></td>
+						  <td th:text="${tlist.amount}"></td>
+						  <td th:text="${tlist.accountNo}"></td>
+						  <td th:text="${tlist.date}"></td>
+						  <td th:text="${tlist.time}"></td>
+					  </tr>
+                    </tbody>
+                </table>
+</body>
+</html>
+		

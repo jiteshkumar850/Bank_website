@@ -1,0 +1,15 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="@{/CSS/bootstrap.min.css}">
+    <style>
+        body {
+            background-image: url(/images/sbi.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>	<h5 style="color: green;text-align: center;color: violet;" th:text="${'&#8377;'+bal+''}"></h5>
+	<h3 style="color: green;text-align: center;" >Sucessfully deposit amount in your account <span style="color: rgb(128, 0, 64);" th:text="${session.accno}"></span></h3>
+</html>

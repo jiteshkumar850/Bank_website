@@ -1,0 +1,21 @@
+<div th:insert="/user/nav"></div>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="@{/CSS/bootstrap.min.css}">
+    <style>
+        body {
+            background-image: url(/images/sbi.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+	<div class="row text-center" style="backdrop-filter: blur(20px) brightness(100%);">
+	<h5 style="color: blue;" th:text="${'&#8377;'+msg+''}"></h5>Amount
+		<h5 style="color: red;" >Sucessfully withdraw amount in your account <span style="color: rgb(128, 0, 128);" th:text="${session.accno}"></span></h5>
+	</div>
+</body>
+
+</html>
